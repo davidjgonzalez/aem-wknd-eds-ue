@@ -38,8 +38,7 @@ function addEventListeners(block) {
 export default function decorate(block) {
 /* This JavaScript makes minor adjustments to the block's DOM */
 
-  block.querySelector('picture').classList.add('image-wrapper');
-  block.querySelector('.image-wrapper img').classList.add('image');
+  /* Common treatments for all options */
   block.querySelector(':scope > div:last-child').classList.add('content');
   block.querySelector('h1,h2,h3,h4,h5,h6').classList.add('title');
 
@@ -51,15 +50,17 @@ export default function decorate(block) {
     }
   });
 
-  // Add conditional logic based on the applied styles
-  // In this case we check if the block has the 'side-by-side' option applied,
-  // and if it does do NOT apply the event handlers.
-
+  /* Treatments for specific options */
   if (getOptions(block).includes('side-by-side')) {
     // Skip adding event listeners for the side-by-side variant.
+    block.querySelector(':scope > div:first-child').classList.add('image-wrapper');
   } else if (!getOptions(block)) {
     // If getOptions returns an empty array, no options are applied.
     // In this case, well add event listeners
-    addEventListeners(block);
+    block.querySelector('picture').classList.add('image-wrapper');
   }
+
+  block.querySelector('.image-wrapper img').classList.add('image');
+
+  addEventListeners(block);
 }
