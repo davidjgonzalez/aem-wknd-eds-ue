@@ -55,7 +55,7 @@ export default function decorate(block) {
   // In this case we check if the block has the 'side-by-side' option applied,
   // and if it does do NOT apply the event handlers.
 
-  if (getOptions(block).contains('side-by-side')) {
+  if (getOptions(block).includes('side-by-side')) {
     // Skip adding event listeners for the side-by-side variant.
   } else if (!getOptions(block)) {
     // If getOptions returns an empty array, no options are applied.
