@@ -22,6 +22,24 @@
         "id": "teaser", 
         "fields": [
             {
+                "component": "select",
+                "name": "classes",
+                "value": "",
+                "label": "Teaser options",
+                "description": "How the teaser will be rendered.",
+                "valueType": "string",
+                "options": [
+                    {
+                        "name": "Default",
+                        "value": ""
+                    },
+                    {
+                        "name": "Side-by-side",
+                        "value": "side-by-side"
+                    }
+                ]
+            },
+            {
                 "component": "reference",
                 "valueType": "string",
                 "name": "image",
