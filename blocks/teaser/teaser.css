@@ -90,7 +90,9 @@
         }
     }
 
-    /* Add specific styling for the side-by-side variant */
+    /**
+    *  Add styling for the side-by-side variant 
+    **/
 
     /* This evaluates to .block.teaser.side-by-side */
     &.side-by-side {    
@@ -134,7 +136,7 @@
 
             p.terms-and-conditions {
                 border: solid var(--text-color);
-                border-width: 0 0 0 10px;
+                border-width: 0;
                 position: relative;              
             }
         }

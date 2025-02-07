@@ -41,6 +41,7 @@ export default function decorate(block) {
   /* Common treatments for all options */
   block.querySelector(':scope > div:last-child').classList.add('content');
   block.querySelector('h1,h2,h3,h4,h5,h6').classList.add('title');
+  block.querySelector('.img').classList.add('image');
 
   // Process each paragraph and mark it as text or terms-and-conditions
   block.querySelectorAll('p').forEach((p) => {
@@ -50,17 +51,14 @@ export default function decorate(block) {
     }
   });
 
-  /* Treatments for specific options */
+  /* Conditional treatments for specific options */
   if (getOptions(block).includes('side-by-side')) {
-    // Skip adding event listeners for the side-by-side variant.
+    /* For side-by-side teaser, add the image-wrapper a higher-level div to support CSS */
     block.querySelector(':scope > div:first-child').classList.add('image-wrapper');
   } else if (!getOptions(block)) {
-    // If getOptions returns an empty array, no options are applied.
-    // In this case, well add event listeners
+    /* For the default option, add the image-wrapper to the picture element to support CSS */
     block.querySelector('picture').classList.add('image-wrapper');
   }
-
-  block.querySelector('.image-wrapper img').classList.add('image');
 
   addEventListeners(block);
 }
