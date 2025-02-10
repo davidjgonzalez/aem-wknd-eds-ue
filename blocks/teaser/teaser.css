@@ -9,6 +9,8 @@
     left: 50%; 
     transform: translateX(-50%);
     height: 500px;
+    overflow: hidden; 
+
 
     /* The teaser image */
     .image-wrapper {
@@ -26,9 +28,9 @@
             transform: scale(1); 
             transition: transform 0.6s ease-in-out;
 
-            &.zoom {
+            .zoom {
                 transform: scale(1.1);
-            }
+            }            
         }
     }
 
@@ -133,11 +135,15 @@
             padding: 3.5em 2em 2em;
             font-size: var(--body-font-size-s);
             font-family: var(--body-font-family);
+            text-align: justify;
+            text-justify: newspaper;
+            hyphens: auto;
 
             p.terms-and-conditions {
                 border: solid var(--text-color);
                 border-width: 0;
-                position: relative;              
+                padding-left: 0;
+                text-align: left;
             }
         }
 
