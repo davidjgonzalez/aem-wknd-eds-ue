@@ -191,9 +191,10 @@
       {
         "component": "multiselect",
         "name": "classes",
-        "value": [],
+        "value": "",
         "label": "Teaser options",
-        "valueType": "array",
+        "description": "",
+        "valueType": "arrays",
         "options": [
           {
             "name": "Side-by-side",
