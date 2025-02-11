@@ -22,24 +22,23 @@
         "id": "teaser", 
         "fields": [
             {
-                "component": "select",
+                "component": "multiselect",
                 "name": "classes",
-                "value": "",
+                "value": [],
                 "label": "Teaser options",
-                "description": "",
-                "valueType": "string",
+                "valueType": "array",
                 "options": [
                     {
-                        "name": "Default",
-                        "value": ""
+                        "name": "Side-by-side",
+                        "value": "side-by-side"
                     },
                     {
-                        "name": "Side-by-side with Image on left",
-                        "value": "side-by-side left"
+                        "name": "Image on left",
+                        "value": "left"
                     },
                     {
-                        "name": "Side-by-side with Image on right",
-                        "value": "side-by-side right"
+                        "name": "Image on right",
+                        "value": "right"
                     }
                 ]
             },
