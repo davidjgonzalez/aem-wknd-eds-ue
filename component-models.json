@@ -201,8 +201,12 @@
             "value": ""
           },
           {
-            "name": "Side-by-side",
-            "value": "side-by-side"
+            "name": "Side-by-side with Image on left",
+            "value": "side-by-side left"
+          },
+          {
+            "name": "Side-by-side with Image on right",
+            "value": "side-by-side right"
           }
         ]
       },
