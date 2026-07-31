@@ -150,6 +150,30 @@
     ]
   },
   {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link",
+        "required": true
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Placeholder Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Placeholder Alt Text"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
